@@ -1,4 +1,3 @@
-[[network forensics]]
 # Scenario
 - A suspicious file was identified on a company web server, raising alarms within the intranet. The Development team flagged the anomaly, suspecting potential malicious activity. To address the issue, the network team captured critical network traffic and prepared a PCAP file for review.
 # Tools used
