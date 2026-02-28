@@ -16,12 +16,7 @@
 - last thing we need is to know Which file was the attacker attempting to exfiltrate
 - first we apply the filter tcp.dstport == 8080 and follow the tcp stream we can see the curl -X POST -d /etc/passwd
 - so the answer is passwd
-# Summery
-- |**Attacker Identification**|Identified the malicious IP address **117.11.88.124** and performed a Geolocation lookup.|`ipgeolocation.io`|
-- |**User-Agent Discovery**|Analyzed HTTP GET requests to identify the attacker's browser and system environment.|`http.request.method == GET`|
-- |**Malicious Upload**|Detected a successful Web Shell upload named **"image.jpg.php"** via a POST request.|`http.request.method == POST`|
-- |**Directory Mapping**|Located the upload directory by filtering for the specific file path in URI requests.|`http.request.uri contains "image.jpg.php"`|
-- |**Data Exfiltration**|Observed the attacker attempting to leak the **/etc/passwd** file through port **8080**.|`tcp.dstport == 8080`|
+
 
 
 
